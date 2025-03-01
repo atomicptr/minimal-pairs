@@ -14,10 +14,7 @@ Edit the JSON file at src/data.json
 			"answerIndex": 2,
 			"choice": {
 				"audioUrl": "https://audio12.forvo.com/audios/mp3/9/o/9o_9478059_76_436794.mp3",
-				"choices": [
-					"箸 は\\し",
-					"橋 は/し"
-				]
+				"choices": ["箸 は\\し", "橋 は/し"]
 			}
 		},
 		{

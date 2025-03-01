@@ -12,7 +12,7 @@
 </script>
 
 <div class="my-4">
-	<div class="mb-8">
+	<div class="mb-8 flex flex-row justify-center">
 		<audio autoplay controls src={currentCard.choice.audioUrl}></audio>
 	</div>
 

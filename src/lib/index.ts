@@ -30,7 +30,9 @@ export function shufflePairsArray(array: Pair[]): Pair[] {
 
 	for (let i = newArray.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
-		newArray[i], (newArray[j] = newArray[j]), newArray[i];
+		const tmp = newArray[i];
+		newArray[i] = newArray[j];
+		newArray[j] = tmp;
 	}
 
 	return newArray;
