@@ -1,38 +1,48 @@
-# sv
+# minimal-pairs
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A simple app for creating static minimal pairs tests
 
-## Creating a project
+## Configuration
 
-If you're seeing this, you've probably already done this step. Congrats!
+Edit the JSON file at src/data.json
 
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+```json
+{
+	"entries": [
+		{
+			"id": "1",
+			"answerIndex": 2,
+			"choice": {
+				"audioUrl": "https://audio12.forvo.com/audios/mp3/9/o/9o_9478059_76_436794.mp3",
+				"choices": [
+					"箸 は\\し",
+					"橋 は/し"
+				]
+			}
+		},
+		{
+			"id": "2",
+			"answerIndex": 1,
+			"hearTest": {
+				"text": "箸 は\\し",
+				"audioUrls": [
+					"https://audio12.forvo.com/audios/mp3/9/p/9p_9478059_76_436796.mp3",
+					"https://audio12.forvo.com/audios/mp3/9/o/9o_9478059_76_436794.mp3"
+				]
+			}
+		}
+	]
+}
 ```
 
-## Developing
+There are as you can see two types of questions, choice where you hear a sound and have to pick which one is correct:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+![](./.github/choice.png)
 
-```bash
-npm run dev
+and hear test where you see a text and have to pick the correct one
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+![](./.github/hear_test.png)
 
-## Building
+## License
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+AGPLv3
