@@ -43,7 +43,7 @@
 </script>
 
 <main class="flex h-screen w-full flex-col items-center justify-center">
-	<div class="card bg-base-200 min-w-lg shadow">
+	<div class="card bg-base-200 lg:min-w-lg shadow">
 		<div class="card-body">
 			<h2 class="card-title">
 				{#if currentCard.question}
